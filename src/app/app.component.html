@@ -1,0 +1,28 @@
+<label>Insert URL</label>
+<input type="text" [(ngModel)]="urlTxt" style="width:400px" />
+<input type="button" value="Get Data" (click)="GetData()" />
+<br>
+<div >
+    <label>
+        <b>Name :</b>
+    </label>
+    <label> {{product?.name}}</label>
+    <br>
+    <label>
+        <b>Price :</b>
+    </label>
+    <label> {{product?.price}}</label>
+    <br>
+    <h4>Reviews</h4>
+    <label>filter:</label>
+    <input type="text" style="width:200px" #filterText>
+    <div *ngFor="let r of product?.reviews">
+        <b>reviewer: </b> {{r.reviewer}}
+        <br>
+        <b> title </b>{{r.title}}
+        <br>
+        <b>text :</b> {{r.reviewText}}
+        <br>
+        <br>
+    </div>
+</div>
