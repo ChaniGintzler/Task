@@ -5,7 +5,7 @@ var Product = require('../models/product.model');
 var request = require('request');
 
 var walmartApiUrlBase = `http://api.walmartlabs.com/v1/reviews/`
-var walApiUrl = `?apiKey=uzebyuj4t2dw73ku8hp5tq2j&lsPublisherId=%7BYour%20LinkShare%20Publisher%20Id%7D&format=json`;
+var walApiUrl = `?apiKey=xxxYour%20LinkShare%20Publisher%20Id%7D&format=json`;
 
 router.get('/products', function (req, res, next) {
   Product.find(function (err, products) {
